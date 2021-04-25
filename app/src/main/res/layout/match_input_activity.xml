@@ -5,23 +5,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:layout_margin="@dimen/standard_margin"
     tools:context=".MatchInputActivity">
 
     <TextView style="@style/tv_standard_gray"
         android:layout_weight="1"
-        android:text="textView" />
+        android:text="@string/match_number" />
 
     <EditText style="@style/et_standard_gray"
         android:layout_weight="2"
-        android:hint="EditText" />
+        android:hint="@string/match_number" />
 
     <TextView style="@style/tv_standard_gray"
         android:layout_weight="1"
-        android:text="TEXTVIEW" />
+        android:text="@string/team_number" />
 
     <EditText style="@style/et_standard_gray"
         android:layout_weight="2"
-        android:hint="EditText" />
+        android:hint="@string/team_number" />
+
+    <View style="@style/standard_view" />
 
     <Button style="@style/btn_standard_white"
         android:text="Button"
@@ -31,6 +34,7 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/weighted"
         android:layout_weight="3"
-        android:layout_margin="@dimen/standard_margin"/>
+        android:layout_margin="@dimen/standard_margin"
+        android:src="@drawable/cc_logo"/>
 
 </LinearLayout>
