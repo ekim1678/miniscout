@@ -10,23 +10,29 @@
 
     <TextView style="@style/tv_standard_gray"
         android:layout_weight="1"
-        android:text="@string/match_number" />
+        android:text="@string/match_number"
+        android:id="@+id/tv_match_number"/>
 
     <EditText style="@style/et_standard_gray"
-        android:layout_weight="2" />
+        android:layout_weight="2"
+        android:id="@+id/et_match_number"/>
 
     <TextView style="@style/tv_standard_gray"
         android:layout_weight="1"
-        android:text="@string/team_number" />
+        android:text="@string/team_number"
+        android:id="@+id/tv_team_number"/>
 
     <EditText style="@style/et_standard_gray"
-        android:layout_weight="2" />
+        android:layout_weight="2"
+        android:id="@+id/et_team_number"/>
 
     <View style="@style/standard_view" />
 
     <Button style="@style/btn_standard_white"
         android:text="Button"
-        android:layout_weight="3"/>
+        android:layout_weight="3"
+        android:onClick="startNextActivity"
+        android:id="@+id/btn_start"/>
 
     <ImageView
         android:layout_width="match_parent"
