@@ -1,23 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:layout_margin="@dimen/standard_margin"
-    tools:context=".ScoutingActivity">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/weighted"
-        android:layout_weight="1"
-        android:id="@+id/tv_match_number"/>
+     <LinearLayout
+         android:id="@+id/ll_information_bar"
+         android:layout_width="match_parent"
+         android:layout_height="@dimen/layout_margin"
+         android:orientation="horizontal">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/weighted"
-        android:layout_weight="1"
-        android:id="@+id/tv_team_number"/>
+         <TextView
+             style="@style/tv_horizontal_black"
+             android:id="@+id/tv_match_number"
+             android:layout_weight="1"
+             android:text="@string/match_number" />
 
-</LinearLayout>
+         <View
+             style="@style/view_standard_vertical_separator"
+             android:background="@color/black"
+             android:visibility="visible" />
+
+         <TextView
+             style="@style/tv_horizontal_black"
+             android:id="@+id/tv_timer_display"
+             android:layout_weight="1" />
+
+         <View style="@style/view_standard_vertical_separator" />
+
+         <TextView
+             style="@style/tv_horizontal_black"
+             android:id="@+id/tv_team_number"
+             android:layout_weight="1"
+             android:text="@string/team_number" />
+
+      </LinearLayout>
+
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:layout_below="@+id/ll_information_bar"
+         android:orientation="vertical">
+
+         <View style="@style/view_standard_horizontal_separator" />
+
+         <TextView
+             style="@style/tv_standard_gray"
+             android:layout_weight="1"
+             android:text="Placement Type One" />
+
+         <Button
+             style="@style/btn_standard_white"
+             android:layout_weight="1"
+             android:text="Placement" />
+
+         <Button
+             style="@style/btn_standard_white"
+             android:layout_weight="1"
+             android:text="Placement"
+             android:layout_margin="@dimen/standard_margin"/>
+
+         <TextView
+             style="@style/tv_standard_gray"
+             android:layout_weight="1"
+             android:text="Incap" />
+
+         <Button
+             style="@style/btn_standard_white"
+             android:layout_weight="1"
+             android:text="Incap" />
+
+         <View style="@style/standard_view"
+             android:layout_weight="0.5" />
+
+         <Button
+             style="@style/btn_standard_white"
+             android:layout_weight="1"
+             android:text="Submit"
+             android:layout_marginBottom="@dimen/standard_margin"/>
+
+     </LinearLayout>
+
+ </RelativeLayout>
